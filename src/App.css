@@ -1,38 +1,220 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.bg-container {
+  background-color: #223a5f;
   min-height: 100vh;
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.header-container {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 0 20px;
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+  width: 80%;
+}
+
+.header-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.score-container {
+  background-color: #ffffff;
+  color: #223a5f;
+  padding: 0 20px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: roboto;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.choose-list-container {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.choose-img {
+  height: 100px;
+  margin: 20px;
+}
+
+.choose-button {
+  background-color: transparent;
+  margin: 20px;
+  border: 0;
+  cursor: pointer;
+}
+
+.custom-popup-btn {
+  border-radius: 5px;
+  align-self: flex-end;
+  margin-right: 100px;
+}
+
+.rules-container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 8px;
+}
+
+.rules {
+  height: 70vh;
+}
+
+.custom-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.result-img {
+  height: 150px;
+}
+
+.res-container {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  color: #ffffff;
+}
+.you-res-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
+}
+.res-play-again-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.result{
+  color: #f9a632;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.play-again-button{
+ background-color: #f4b358;
+ border: 2px solid #f6f5f3;
+ padding: 10px;
+ border-radius: 8px;
+ color: #223a5f;
+ font-weight: 700;
+ cursor: pointer;
+ box-shadow: 0px 0px 20px #9b9494;
+}
+.rules-button{
+  padding: 10px 20px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.score-p {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 📱 Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .header-container {
+    /* flex-direction: column; */
+    align-items: center;
+    margin: 0 20px;
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .score-container {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+
+  .choose-list-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .choose-img {
+    height: 70px;
+    margin: 10px;
+  }
+
+  .result-img {
+    height: 100px;
+  }
+
+  .custom-popup-btn {
+    margin:30px 20px 0px 0px;
+    align-self: center;
+  }
+
+  .rules {
+    height: 50vh;
+  }
+
+  .result {
+    font-size: 1.5rem;
+  }
+
+  .play-again-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .rules-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* 💻 Tablets & Medium Screens (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-container {
+    margin: 0 40px;
+    width: 90%;
+  }
+
+  .choose-img {
+    height: 90px;
+    margin: 15px;
+  }
+
+  .result-img {
+    height: 120px;
+  }
+
+  .res-container {
+    width: 80%;
+  }
+
+  .rules {
+    height: 60vh;
   }
 }
